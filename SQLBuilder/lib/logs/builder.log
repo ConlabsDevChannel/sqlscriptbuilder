@@ -1,0 +1,4 @@
+[2021-12-19 11:35:22.747][DEBUG][main][d.c.s.SQLBuilderApplicationRunner][main:11] Test
+[2021-12-19 11:36:15.325][ERROR][main][d.c.s.SQLBuilderApplicationRunner][main:14] 
+java.lang.NullPointerException: Error Test
+	at dev.conlabs.sqlbuilder.SQLBuilderApplicationRunner.main(SQLBuilderApplicationRunner.java:12)
