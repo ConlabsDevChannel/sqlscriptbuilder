@@ -16,9 +16,6 @@ public class SQLScriptBuilderApplicationRunner {
 	public static void main(String[] args) {
 		logger.debug("Application Runs At: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 		
-		
-		SQLDto dto = new SQLDto(null, null, null, null, null, null, null);
-		dto.indexes = new SQLIndexesDto();
 	}
 	
 }
