@@ -1,0 +1,75 @@
+{
+    "type": "create",
+    "requestDate": "20220130",
+    "table": {
+        "owner": "TOWNER",
+        "tablename": "TESTING_BASE_INFO",
+        "comment": "Testbase for builder",
+        "tablespace": "TSPACED",
+        "columns": [
+            {
+                "name": "COLUMN_N1",
+                "comment": "Column no.1",
+                "type": "VARCHAR2",
+                "length": 20,
+                "nullable": false
+            },
+            {
+                "name": "COLUMN_N2",
+                "comment": "Column no.2",
+                "type": "NUMBER",
+                "length": [20, 5],
+                "nullable": true,
+                "default": 0
+            },
+            {
+                "name": "COLUMN_N3",
+                "comment": "Column no.3",
+                "type": "VARCHAR2",
+                "length": 14,
+                "nullable": true,
+                "default": "TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')"
+            }
+        ]
+    },
+    "constraints": {
+        "owner": "TOWNER",
+        "tablename": "TESTING_BASE_INFO",
+        "constraint": [
+            {
+                "action":"ADD",
+                "type": "PRIMARY KEY",
+                "name": "",
+                "columns": ["COLUMN_N1"],
+                "additionalCommand": "USING INDEX"
+            }
+        ]       
+    },
+    "indexes": {
+        "owner":"TOWNER",
+        "tablename":"TESTING_BASE_INFO",
+        "tablespace":"TSPACED",
+        "index": [
+            {
+                "action":"ADD",
+                "name":"_PK",
+                "tablename":["COLUMN_N1"]
+            }
+        ]
+    },
+    "synonym": {
+        "synonymOwner":"NOWNER",
+        "originOwner":"TOWNER",
+        "tablename":"TESTING_BASE_INFO"
+    },
+    "grant": {
+        "owner":"TOWNER",
+        "tablename":"TESTING_BASE_INFO",
+        "target":[
+            {
+                "roleUser":"NOWNER",
+                "option":["SELECT", "CREATE", "DELETE", "INSERT"]
+            }
+        ]
+    }
+}
